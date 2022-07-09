@@ -3,7 +3,9 @@ package SeleniumTestCases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Values implements Methods {
+import java.util.concurrent.TimeUnit;
+
+public class Values implements MainMethods {
 
     public WebDriver webDriver;
 
@@ -16,8 +18,9 @@ public class Values implements Methods {
         webDriver=new FirefoxDriver();// launching firefox webdriver
 
         webDriver.manage().window().maximize(); // maximize the webdriver window
+        webDriver.get("https://www.google.com/");//launching the webdriver and redirecting to the google.com
 
-
+        webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);//Implicit Wait(Waits for 30 seconds before throwing an exception)
 
     }
 }

@@ -2,6 +2,5 @@ package SeleniumTestCases;
 
 public interface Methods {
 
-    void InitiatingWebDriver();
-
+    void signupForFacebook();
 }
