@@ -23,4 +23,7 @@ public class Values implements MainMethods {
         webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);//Implicit Wait(Waits for 30 seconds before throwing an exception)
 
     }
+
+         public String searchforfacebook= "Create facebook account";
+
 }
