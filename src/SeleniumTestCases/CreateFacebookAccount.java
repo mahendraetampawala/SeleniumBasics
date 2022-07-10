@@ -17,8 +17,10 @@ public class CreateFacebookAccount extends Values implements Methods{
         System.out.println("Executed");
         googleSearch.sendKeys(searchforfacebook);//sending keys to the google search
 
-        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;
+        webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS) ;//Implicit wait
         /*
+
+        //Explicit wait
         WebDriverWait wait=new WebDriverWait(webDriver,30);
 
         WebElement waitforsearch;
@@ -28,6 +30,7 @@ public class CreateFacebookAccount extends Values implements Methods{
         */
 
         webDriver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[2]/div[2]/div[5]/center/input[1]")).click();//Clicking on the google search button
+        webDriver.navigate().refresh();//Refresh the page
 
 
     }
